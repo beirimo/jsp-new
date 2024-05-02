@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<h1>도서검색 </h1>
+<div class = "row mb-2">
+    <div class = "col-6 col-md-4"> <!-- 해상도에 따라 큰거일때 6 작은거일때 4로 한다.-->
+        <form action="" class="input-group mb-3" name = "frm">
+            <input type="text" class = "form-control form-control-lg " name = "query" value = "자바의 정석" placeholder="검색하실 책제목을 입력하세요">
+            <button class="btn btn-primary" >검색</button>
+            <br>
+        </form>
+    </div>
+    <div id="div_book" class="row"></div>
+</div>
+   
+
+<script id="temp_book" type="X-handlebars-template">
+	{{#each documents}}
+		<div class="col-6 col-md-4 col-lg-2">
+			<div class="card">
+				<div class="card-body">
+					<img src="{{thumbnail}}">
+				</div>
+				<div class="card-footer">
+					<div class="ellipsis">{{title}}</div>
+				</div>
+			</div>
+		</div>
+	{{/each}}
+</script>
+
+<script>
+let myQuery = $(frm.query).val(); //frm폼안에있는 query에 있는 밸류값을 들고와서 qeury변수 안에 넣어준다.
+let page = 1;
+	getData();
+	function getData(){
+		$.ajax({
+			type :"get",
+			url:"https://dapi.kakao.com/v3/search/book?target=title",
+			headers:{"Authorization":"KakaoAK 89e3021ad2846184fd12b67daf705b0f"},
+			dataType:"json",
+			data:{"query": myQuery, page:1, size:6},
+			success:function(data){
+				console.log(data);
+				const temp=Handlebars.compile($("#temp_book").html());
+				$("#div_book").html(temp(data));
+			}
+		});
+	}
+</script>

@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<style>
+#modalInfo{
+	top:30%;
+	}
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="modalInfo" data-bs-backdrop="static"
+	data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	
+	
+	<div class="modal-dialog text-center">
+		<div class="modal-content text-center">
+			<div class="modal-header text-center">
+				<h1 class="modal-title fs-5 " id="staticBackdropLabel">Update Information</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<input class="form-control mb-2 id="uname" placeholder="NAME" value=${user.uname }>
+				<input class="form-control mb-2" placeholder="PHONE" value=${user.phone }>
+				<div class="input-group">
+					<input class="form-control mb-2" value="${user.add1}">
+					<button class="btn btn-primary mb-2">Address Search</button>
+				</div>
+				<input class="form-control mb-2" placeholder="ADDRESS" value="${user.add2 }">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-primary">SAVE</button>
+			</div>
+		</div>
+	</div>
+</div>

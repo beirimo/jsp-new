@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
+    <fullyQualifiedTypeName name="javax.sql.rowset.Joinable"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.PresentationDirection"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+</qualifiedTypeNameHistroy>

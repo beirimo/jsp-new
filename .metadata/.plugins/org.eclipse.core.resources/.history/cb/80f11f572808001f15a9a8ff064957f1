@@ -1,0 +1,11 @@
+package model;
+
+public class TestBBSDAO {
+
+	public static void main(String[] args) {
+		BBSDAOImpl dao = new BBSDAOImpl();
+		dao.list();
+
+	}
+
+}

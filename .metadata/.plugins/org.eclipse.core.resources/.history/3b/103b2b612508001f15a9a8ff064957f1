@@ -1,0 +1,14 @@
+package model;
+
+import java.util.*;
+
+public interface BBSDAO {
+
+	public ArrayList<BBSVO> list();
+	public void insert();
+	
+	
+	
+	
+	
+}

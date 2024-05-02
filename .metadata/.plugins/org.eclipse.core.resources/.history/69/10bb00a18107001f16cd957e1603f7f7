@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
+*{
+  font-family: "Jua", sans-serif;
+}
+
+h1{
+	text-align: center;
+	margin : 20px 0px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.nav-link text{
+  color: #ffffff; /* 링크 텍스트 색상을 흰색으로 설정합니다. */
+}
+
