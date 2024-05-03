@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 
-<nav class="navbar navbar-expand-lg"   style="background-color: #10142d;">
+<nav class="navbar navbar-expand-lg"   style="background-color: #4ce2fc">
 	<div class="container-fluid" >
 		<!-- <a class="navbar-brand" href="/">홈으로가기 </a> -->
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -14,9 +14,14 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item"><a class="nav-link active" aria-current="page" href="/kakao/book"  style="color: #fffd33">도서검색</a></li>
-				<li class="nav-item"><a class="nav-link active" aria-current="page" href="/kakao/local" style="color: #ff7366">지역검색</a></li>
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="/kakao/local" style="color: #fffd33">지역검색</a></li>
 				<li class="nav-item"><a class="nav-link active" aria-current="page" href="/bbs/list" style="color: #dcab33">자유게시판</a></li>
 				<li class="nav-item"><a class="nav-link active" aria-current="page" href="/user/list" style="color: #41d73c">유저목록</a></li>
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="https://finance.naver.com/"  target="_blank" style="color: #41d73c">주식정보</a></li>
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="https://getbootstrap.kr/"  target="_blank" style="color: #a89932">부트스트랩</a></li>
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="https://github.com/helen-cho" target="_blank" style="color: #41d73c">Helper</a></li>
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="https://chat.openai.com/c/18e3a208-db95-4269-a1c8-7b190d8f79ad"  target="_blank"  style="color: #41d73c">gpt</a></li>
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="https://www.ppomppu.co.kr/" target="_blank" style="color: #41d73c">심심</a></li>				
 			</ul>
 			
 			<ul class="navbar-nav mb-2 mb-lg-0"> <!-- 마진엔드-오토 빼기 -->

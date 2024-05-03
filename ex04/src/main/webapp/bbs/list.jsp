@@ -2,8 +2,25 @@
     pageEncoding="UTF-8"%>
 
 <div>
-<h1>자유 게시판.....</h1>
-<div id="div_bbs"></div> <!-- 밑에 스크립드들은 데이터출력을 위한 도구일뿐 결국 데이터는 여기에 들어오는것. -->
+	<h1>자유 게시판.....</h1>
+	<div class="row"></div>
+	<div class="col-6 col-md-4 col-lg-3 mb-2">
+		<form name="frm">
+			<div class="input-group">
+				<input  name="query" class="form-control">
+				<button class="btn btn-info">검색</button>
+			</div>
+		</form>
+	</div>
+	<div>
+			<span id="total"></span>
+	</div>
+	<div class="col text-end mb-2" id="div_write">
+		<a href="/bbs/insert" class="btn btn-primary btn-sm px-3"> 글쓰기</a>
+	</div>
+	<div id="div_bbs"></div>
+	<!-- 밑에 스크립드들은 데이터출력을 위한 도구일뿐 결국 데이터는 여기에 들어오는것. -->
+	<div id="pagination" class="pagination justify-content-center mt-5"></div>
 </div>
 
 
@@ -30,6 +47,13 @@
 <script> //ajax은 스크립트에서 쓴다.
 	let page = 1; //시작페이지설정해주기 
 	let size = 5;
+	let query ="";
+	
+	$(frm).on("submit", function(e){
+		e.preventDefault();
+		query=$(frm.querey).val();
+		alert(query);
+	});
 
 	getData();
  	function getData() { //함수로 쓴이유는 여러번 해야하기때문에 
@@ -37,40 +61,19 @@
            		type: "get",
            	 	url: "/bbs/list.json", // 로컬서버는 ~3000까지는 생략가능 
            	 	dataType: "json",
-           	 	data:{page, size},
+           	 	data:{page, size, query},
            		success: function (data) { //url의 데이터가 여기로 들어감 
                 		// alert("성공~");
                 		const temp = Handlebars.compile($("#temp_bbs").html()); //아이디가 tempPosts인걸 html로 compile해서 temp에 저장 
                 		$("#div_bbs").html(temp(data)); // temp에 data를 넣고  divPosts에 출력   
-                		
-                 		$("#page").html(page); //데이터 불러오기 성공을 하면 #page를 출력해라  이거없으면 번호가 가감이 안된다. 
-                 		if(page == 1){ //1페이지일대 이전버튼안눌리게하기
-                  	   $("#prev").attr("disabled", true)
-                 		}else{
-                		   $("#prev").attr("disabled", false)
-               		}
             	}
         	});
     	};
 
 </script>
 
-
-<div class="text-center my-4"> <!-- my는 마진 y축이라는 뜻-->
-    <button class="btn btn-primary" id="prev">이전</button>
-    <span class="mx-2" id="page"><b>1</b></span> <!-- 같은줄에 하기위해 div아니고 span으로 한거임. -->
-    <button class="btn btn-danger" id="next">다음</button>
-</div>
 <script>
-//다음버튼 클릭
-$("#next").on("click", function () {//page를 1업하고 싶은데 page의 변수가 없으니 전역변수로 하나 설정해주자
-    page++;
-    getData();
-});
-$("#prev").on("click", function () {//page를 1업하고 싶은데 page의 변수가 없으니 전역변수로 하나 설정해주자
-    page--;
-    getData();
-});
+
 </script>
 
 <div class="col text-end" id="divWrite" > <!-- 아무튼 div안에 넣어야 만지기가 편하다. -->
@@ -84,6 +87,39 @@ $("#prev").on("click", function () {//page를 1업하고 싶은데 page의 변�
      else{
          $("#divWrite").hide();
      }
+     getTotal();
+     function getTotal(){
+    	 $.ajax({
+    		 type:"get",
+    		 url:"/bbs/total",
+    		data:{query},
+ 		 success:function(data){
+ 			if(data ==0){
+ 				alert("검색내용 없네요.");
+ 				$(frm.query).val("");
+ 			}else{
+ 			const totalPage=Math.ceil(data/size);
+            	$("#pagination").twbsPagination("changeTotalPages", totalPage, page);
+            	$("#total").html("검색수 :" + data + "건");
+ 			 }   
+ 		}
+    	 });	
+     }
+     //페이지네이션 출력
+     $('#pagination').twbsPagination({
+         totalPages:100, 
+         visiblePages: 10, 
+         startPage : 1,
+         initiateStartPageClick: false, 
+         first:'<i>처음</i>', 
+         prev :'<i>이전</i>',
+         next :'<i>다음</i>',
+         last :'<i>마지막</i>',
+         onPageClick: function (event, clickPage) {
+             page=clickPage; 
+             getData();
+         }
+      });
 </script>
 
 

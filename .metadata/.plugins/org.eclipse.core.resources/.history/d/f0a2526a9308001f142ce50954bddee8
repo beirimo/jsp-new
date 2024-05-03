@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="row justify-content-center">
+<div class="col-10">
+<h1>글수정 페이지 </h1>
+	<form class="p-5" name="frm" method="post" action="/bbs/update">
+	<input name="writer" value="${user.uid}" type="hidden">
+	<input name="bid" value="${bbs.bid }" type="hidden">
+	<input type="text" placeholder="제목을 쓰세요" class="form-control mb-3" name="title" value="${bbs.title }">
+	<textarea class="form-control" name="contents" cols="30" rows="12></textarea>
+	</form>
+
+</div>
+</div>

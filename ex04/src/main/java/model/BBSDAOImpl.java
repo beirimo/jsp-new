@@ -129,4 +129,54 @@ public class BBSDAOImpl implements BBSDAO{
 		}
 		return array;
 	}
-}
+
+	@Override
+	public int total() {
+		int total=0;
+		try {
+			String sql="select count(*) total from bbs";
+			PreparedStatement ps=con.prepareStatement(sql);
+			ResultSet rs=ps.executeQuery();
+			
+			if(rs.next()) total=rs.getInt("total");
+		}catch(Exception e) {
+			System.out.println("전체갯수: " + e.toString());
+		}
+		
+		return total;
+	}
+//검색하기 
+	   @Override
+	   public ArrayList<BBSVO> list(int page, int size, String query) {
+	      ArrayList<BBSVO> array = new ArrayList<BBSVO>();
+	      query = "%" + query + "%";
+	      try {   
+	         String sql = "select * from view_bbs ";
+	         sql+= " where title like ? or contents like ? or writer like ?";
+	         sql+= " order by bid desc";
+	         sql+= " limit ?, ?";
+	         PreparedStatement ps = con.prepareStatement(sql); //가져온 sql을 ps에 넣자.
+	         ps.setString(1, query);
+	         ps.setString(2, query);
+	         ps.setString(3, query);
+	         ps.setInt(4, (page - 1) * size); //스타트값 
+	         ps.setInt(5, size);
+	         ResultSet rs = ps.executeQuery(); //sql을 실행해서 rs에 넣자.
+	         while(rs.next()) { //rs를 반복해서 가져오자.
+	            BBSVO vo = new BBSVO(); //빈 vo를 하나만들자.
+	            vo.setBid(rs.getInt("bid"));
+	            vo.setTitle(rs.getString("title"));
+	            vo.setWriter(rs.getString("writer"));
+	            vo.setBdate(sdf.format(rs.getTimestamp("bdate")));
+	            vo.setUname(rs.getString("uname"));
+	            vo.setPhoto(rs.getString("photo"));
+	            vo.setContents(rs.getString("contents"));
+	            array.add(vo); //가져온 vo를 array에 넣어주자. 
+	            System.out.println(vo.toString());
+	         }
+	      }catch(Exception e){
+	         System.out.println("게시판 목록sql 오류 " + e.toString());
+	      }
+	      return array;
+	   }
+	}

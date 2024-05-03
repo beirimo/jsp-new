@@ -1,0 +1,37 @@
+package model;
+
+import java.util.ArrayList;
+import java.sql.*;
+
+public class CommentDAOImpl implements CommentDAO{
+	Connection con=Database.CON;
+	
+	@Override
+	public ArrayList<CommentVO> list(int bid, int page, int size) {
+		ArrayList<CommentVO> array=new ArrayList<CommentVO>();	
+	}
+
+	@Override
+	public void insert(CommentVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(CommentVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int cid) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int total(int bid) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

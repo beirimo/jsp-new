@@ -1,6 +1,6 @@
 package model;
 
-import java.util.Date;
+import java.util.*;
 
 public class BBSVO extends UserVO{
 	private int bid;
@@ -8,6 +8,7 @@ public class BBSVO extends UserVO{
 	private String contents;
 	private String writer;
 	private String bdate;
+	
 	
 	public int getBid() {
 		return bid;

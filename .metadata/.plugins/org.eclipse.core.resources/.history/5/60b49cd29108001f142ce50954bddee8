@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="row justify-content-center">
+<div class="col-10">
+<h1>글수정 페이지 </h1>
+	<form class="p-5">
+	<input name="writer"> 
+	<input name="bid">
+	</form>
+
+</div>
+</div>

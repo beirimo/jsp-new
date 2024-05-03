@@ -3,3 +3,19 @@
 1714610796981	Rename resource 'BbsServlet.java'
 1714615482526	Rename type 'TestBBSDAO'
 1714637225032	Copy file
+1714649887527	Copy file
+1714650120186	Move file
+1714650255783	Copy file
+1714650258549	Copy file
+1714650261255	Copy file
+1714650263730	Copy file
+1714707682955	Rename type 'CommentsVO'
+1714707792948	Rename compilation unit 'CommentsDAO.java'
+1714707887702	Rename type 'CommentDAO'
+1714708057460	Rename type 'CommentDAOImpl'
+1714708366500	Delete element
+1714708529956	Delete element
+1714708534076	Delete element
+1714708634014	Delete element
+1714709641574	Rename compilation unit 'CommentDAOimpl.java'
+1714718991653	Rename resource 'Comments.jsp'
