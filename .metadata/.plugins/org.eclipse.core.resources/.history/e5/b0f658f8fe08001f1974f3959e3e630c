@@ -1,8 +1,0 @@
-package model;
-import java.util.*;
-
-public class CommentsDAO {
-	public Arraylist<CommentsVO> list(int bid, int page, int size);
-	
-
-}

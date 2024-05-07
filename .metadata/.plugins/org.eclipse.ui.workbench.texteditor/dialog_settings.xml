@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="request.setAttribute(&quot;code&quot;, dao.getCode());"/>
 		<list key="findhistory">
-			<item value="target=&quot;_blank&quot;"/>
-			<item value="ajax"/>
-			<item value="a.jax"/>
-			<item value="userinfo"/>
-			<item value="info"/>
-			<item value="cons"/>
-			<item value="page"/>
-			<item value="conso"/>
+			<item value="request.setAttribute(&quot;code&quot;, dao.getCode());"/>
 			<item value="con"/>
-			<item value="equal"/>
-			<item value="equ"/>
-			<item value="eq"/>
-			<item value="equa"/>
-			<item value="equals"/>
-			<item value="String.equals"/>
+			<item value="const"/>
+			<item value="nav"/>
+			<item value="img"/>
+			<item value="rru"/>
+			<item value="re"/>
+			<item value="retu"/>
+			<item value="im"/>
+			<item value="_user"/>
+			<item value="user"/>
+			<item value="18"/>
+			<item value="181"/>
+			<item value="sql"/>
+			<item value="order by"/>
 		</list>
 		<list key="replacehistory">
 		</list>

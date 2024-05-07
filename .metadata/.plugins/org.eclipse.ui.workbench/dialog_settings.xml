@@ -3,23 +3,22 @@
 	<section name="WorkbenchPreferenceDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="900"/>
 		<item key="DIALOG_Y_ORIGIN" value="30"/>
-		<item key="DIALOG_WIDTH" value="821"/>
+		<item key="DIALOG_WIDTH" value="875"/>
 		<item key="DIALOG_HEIGHT" value="1018"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe Print|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|2|Segoe Print"/>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
-			<item value="org.eclipse.jdt.ui.java/org.eclipse.jdt.debug.ui.java"/>
-			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.eclipse.jpt.jaxb"/>
 		</list>
 		<section name="NewWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="706"/>
 			<item key="DIALOG_Y_ORIGIN" value="226"/>
-			<item key="DIALOG_WIDTH" value="525"/>
-			<item key="DIALOG_HEIGHT" value="500"/>
-			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+			<item key="DIALOG_WIDTH" value="875"/>
+			<item key="DIALOG_HEIGHT" value="536"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe Print|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|2|Segoe Print"/>
 		</section>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
@@ -37,10 +36,10 @@
 		</list>
 	</section>
 	<section name="PropertyDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="568"/>
-		<item key="DIALOG_Y_ORIGIN" value="158"/>
-		<item key="DIALOG_WIDTH" value="801"/>
-		<item key="DIALOG_HEIGHT" value="556"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<item key="DIALOG_X_ORIGIN" value="676"/>
+		<item key="DIALOG_Y_ORIGIN" value="166"/>
+		<item key="DIALOG_WIDTH" value="1209"/>
+		<item key="DIALOG_HEIGHT" value="587"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe Print|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|2|Segoe Print"/>
 	</section>
 </section>

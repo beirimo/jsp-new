@@ -2,29 +2,12 @@
     pageEncoding="UTF-8"%>
 
 <div>
-	<h1>자유 게시판.....</h1>
-	<div class="row"></div>
-	<div class="col-6 col-md-4 col-lg-3 mb-2">
-		<form name="frm">
-			<div class="input-group">
-				<input  name="query" class="form-control">
-				<button class="btn btn-info">검색</button>
-			</div>
-		</form>
-	</div>
-	<div>
-			<span id="total"></span>
-	</div>
-	<div class="col text-end mb-2" id="div_write">
-		<a href="/bbs/insert" class="btn btn-primary btn-sm px-3"> 글쓰기</a>
-	</div>
-	<div id="div_bbs"></div>
-	<!-- 밑에 스크립드들은 데이터출력을 위한 도구일뿐 결국 데이터는 여기에 들어오는것. -->
-	<div id="pagination" class="pagination justify-content-center mt-5"></div>
+<h1>자유 게시판.....</h1>
+<div id="div_bbs"></div> <!-- 밑에 스크립드들은 데이터출력을 위한 도구일뿐 결국 데이터는 여기에 들어오는것. -->
 </div>
 
 
-<script id="temp_bbs" type="x-handlebars-template">
+<script id="temp_bbs"  type="x-handlebars-template">
     <table class="table table-bordered table-dark" style ="text-align: center;">
         <tr>
             <td>번호</td>
@@ -121,5 +104,4 @@
          }
       });
 </script>
-
 
