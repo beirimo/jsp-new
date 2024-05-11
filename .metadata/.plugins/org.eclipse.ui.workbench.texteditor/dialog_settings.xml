@@ -6,30 +6,30 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="request.setAttribute(&quot;code&quot;, dao.getCode());"/>
+		<item key="selection" value="size"/>
 		<list key="findhistory">
-			<item value="request.setAttribute(&quot;code&quot;, dao.getCode());"/>
-			<item value="con"/>
-			<item value="const"/>
-			<item value="nav"/>
-			<item value="img"/>
-			<item value="rru"/>
-			<item value="re"/>
-			<item value="retu"/>
-			<item value="im"/>
-			<item value="_user"/>
-			<item value="user"/>
-			<item value="18"/>
-			<item value="181"/>
-			<item value="sql"/>
-			<item value="order by"/>
+			<item value="size"/>
+			<item value="."/>
+			<item value="handle."/>
+			<item value="handle"/>
+			<item value="stu"/>
+			<item value="div_"/>
+			<item value="div"/>
+			<item value="temp"/>
+			<item value="alert"/>
+			<item value="scode"/>
+			<item value="966"/>
+			<item value="dao"/>
+			<item value="instruc"/>
+			<item value="inst"/>
+			<item value="value"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="992"/>
-		<item key="DIALOG_Y_ORIGIN" value="233"/>
+		<item key="DIALOG_X_ORIGIN" value="1422"/>
+		<item key="DIALOG_Y_ORIGIN" value="218"/>
 		<item key="DIALOG_WIDTH" value="505"/>
 		<item key="DIALOG_HEIGHT" value="518"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe Print|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|2|Segoe Print"/>

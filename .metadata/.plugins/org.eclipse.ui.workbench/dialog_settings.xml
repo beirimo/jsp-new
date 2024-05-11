@@ -36,10 +36,10 @@
 		</list>
 	</section>
 	<section name="PropertyDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="676"/>
-		<item key="DIALOG_Y_ORIGIN" value="166"/>
+		<item key="DIALOG_X_ORIGIN" value="354"/>
+		<item key="DIALOG_Y_ORIGIN" value="20"/>
 		<item key="DIALOG_WIDTH" value="1209"/>
-		<item key="DIALOG_HEIGHT" value="587"/>
+		<item key="DIALOG_HEIGHT" value="1028"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe Print|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|2|Segoe Print"/>
 	</section>
 </section>
